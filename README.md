@@ -115,4 +115,86 @@ Alright, we have seen the log, just in case getting stuck on log, you can press 
 **i. Check your branch**
 Now the next useful feature in Git is branch. Branch is like having the same print of homework with your friend.
 You might want to do the homework differently from your friend, but the task given is the same. Branching is having the same file at any point you would like, and not to disturb other's progress, you can instead just duplicate it and start your own modifications  
+
+First, always check what you are on right now, specially when you are lost track of the job. For checking what you are on use `git branch`, this will tell you what branch are you working on.  
 ![Git branch](imgs/gitBranch.png)
+
+ <br>
+ <br>
+
+**f. Creating your branch**  
+Alright, now simulate a situation where you want to modify or try something new but too afraid to interfere your main progress. `git branch mabranch` to create a branch with the name of "mabranch", modify the name to understand better.
+![Git mabranch](imgs/gitBranchMabranch.png)
+
+<br>
+
+**g. Modify the branch**  
+Now we have made a branch, try to `ls`, then choose a file to edit, just write on the `.txt` file some random words, save it and don't forget to commit it.  
+![Git mabranch checkout](imgs/gitBranchCommit.png)
+
+<br>
+
+**h. Observe the branch**  
+You will most likely on your master or main branch, now switch your branch into mabranch or whatever you chose previously using `git checkout mabranch`. You should be seeing difference in your branch, try using `type filename.txt`, this will show what's inside file.txt, things should be different than what you remember placing.
+![Git mabranch changed](imgs/gitBranchMabranchCommit.png)
+
+<br>
+<br>
+
+**i. Changes**  
+Naming on a branch can change sometimes as we code. Features adding on that branch might give some new characteristic on it, so there is actually a way to change the name of a branch using the command of `git branch -m newName` on your current branch that needs new name and see directly the change by using `git branch`.  
+![Git mabranch name changed](imgs/gitBranchRename.png)
+
+<br>
+<br>
+
+**j. Combine**  
+When there are some changes you like from other branch, you might feel like adding it to your current branch. The feature is available on git and it's `git merge`, this will merge a specific branch with your current branch. Commonly you will prefer to merge that other feaature to your main branch. First switch to your main branch first and then merge it with `git merge branchName`.  
+<br>
+Don't be shocked when you are seeing the vim editor on a flash like picture below.  
+![Git Vim](imgs/gitVimedMerging.png)  
+This is called vim, a text editor basically, you can type anything describing more about the merging. when done press `Esc` and type on `:wq` to write and quit from the vim editor. Now you will faced with another view such as the picture below.  
+![Git merged](imgs/gitMerged.png)  
+If you want that peace of mind knowing your merge really been recorded, you can go on check the logs, it will look something like this.  
+![Git merge log](imgs/gitLogMerged.png)  
+
+<br>
+<br>
+
+**k. Remove**  
+Meanwhile, on another situation, you might don't like the fact that another branch has a messed up modification and you would like to delete it, you can just simply type out `git branch -d branchName` and it will be gone. To save some readings, let's simulate creation of a branch and deleting it afterwards. You will get something like this.  
+![Git delete branch](imgs/gitBranchDeleted.png)
+
+<br>
+<br>
+
+## 3. GitHub  
+A social media, but more likeprogramming genre. Dont forget to create an account before starting.  
+
+<br>
+<br>
+
+**a. Repository**  
+After some coding, creating new things and finally you felt confident to upload your project and show it to the world, it's time for you to know about GitHub. First creat a repository on your GitHub, repository means folder. Fill out the name before hitting the green button circled in the image  
+![Create a repositoy](imgs/CreateRepository.png)
+
+<br>
+<br>
+
+**b. Entering**  
+The next thing you will see is your empty repository with a link like in the image below.  
+![GitHub empty repository](imgs/gitHubEmptyRepo.png)
+
+<br>
+<br>
+
+**c. Origin**  
+Now we need to add a remote repository to push or upload our code. The link from the previous point needs to be copied for `git remote add origin thelinkyoucopied.com`. The image below will most likely explains how.  
+![GitHub repository link to origin](imgs/gitAddOrigin.png)
+
+<br>
+<br>
+
+**d. Push**  
+Next we have made clear our destination, now pushing it to the remote repository. Using `git push origin nameofbranch` to push certain branch to the remote repository.
+![Git push origi](imgs/gitPushOrigin.png)
